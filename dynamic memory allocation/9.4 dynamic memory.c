@@ -18,6 +18,12 @@ int main()
   printf("welcome to our dynamic island.\n");
   Car *my_car = (Car*)malloc(sizeof(Car));
 
+if (my_car == NULL)
+  {
+    printf("memory allocation failed.\n");
+    return 1;
+  }
+
   printf("please enter your model of car: ");
   scanf("%s", my_car->model);
   printf("please enter your company of car: ");
